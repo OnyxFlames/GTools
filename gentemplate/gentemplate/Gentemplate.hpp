@@ -9,6 +9,8 @@ const std::string database_path = "../templates/";
 
 class Gentemplate
 {
+private:
+	Flags flag;
 public:
 	Gentemplate(ArgumentHandler& ah);
 	~Gentemplate();

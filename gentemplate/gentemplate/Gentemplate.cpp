@@ -6,7 +6,8 @@ namespace fs = std::experimental::filesystem;
 
 Gentemplate::Gentemplate(ArgumentHandler & ah)
 {
-	generate(ah.getflags().name, ah.getflags().template_name);
+	flag = ah.getflags();
+	generate(flag.name, flag.template_name);
 }
 
 Gentemplate::~Gentemplate()
