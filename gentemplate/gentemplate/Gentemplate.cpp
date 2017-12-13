@@ -18,7 +18,7 @@ void Gentemplate::generate(std::string _temp, std::string _name)
 {
 	if (!fs::exists(database_path + _temp))
 	{
-		std::cerr << "Template '" << _temp << "' was not found!\nUpdate database using --update <hostpath>.";
+		std::cerr << "Template '" << _temp << "' was not found!\nYou can:\n\tUpdate database using --update <hostpath>\nor\n\tAdd the template using --add-template <file/folderpath> <alias>\n";
 		std::exit(-1);
 	}
 	else if (fs::exists(_name))

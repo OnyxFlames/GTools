@@ -6,15 +6,17 @@
 
 void print_usage(std::string prog_name)
 {
-	std::cout << prog_name << "\tUsage:\n\t";
-	"";
+	std::cout << prog_name << "Usage:\n"
+		"\t-u/--update <hostpath>\t-\tUpdate the local database of templates\n"
+		"\t-s/--search <keyword>\t-\n\tSearch local templates and list ones that match with the given keyword\n"
+		"\t<template> <alias>\t-\n\tGenerate <template> as <alias> in current working directory\n";
 }
 
 ArgumentHandler::ArgumentHandler(int _c, char * _v[])
 {
 	if (_c < 2)
 	{
-		printf("%s - template generator\n\t", get_filename(_v[0]).c_str());
+		printf("%s - Template generator\n\t", get_filename(_v[0]).c_str());
 		print_usage(prog_name);
 		std::exit(-1);
 	}
